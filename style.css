@@ -7,6 +7,7 @@ body {
   height: 100%;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
+  background: #31343b;
 }
 
 body {
@@ -18,7 +19,7 @@ body {
 }
 
 main {
-  background: url("../images/background.png");
+  background: url("../images/background.svg");
   width: 375px;
   height: 812px;
 }

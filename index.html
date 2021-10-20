@@ -24,31 +24,31 @@
         <img src="https://github.com/birobirobiro.png" alt="Foto pessoal">
       </div>
 
-      <h1>João Inácio</h1>
-      <a href="https://instagram.com/birobirobiro">
+      <h1 id="userName">João Inácio</h1>
+      <a href="https://instagram.com/birobirobiro" target="_blank">
         <img src="images/github.svg" alt="Ícone Github">birobirobiro
       </a>
 
       <p>An instructor focused on helping pople start programming for web</p>
 
-      <ul>
-        <li>
+      <ul id="socialLinks">
+        <li class="youtube">
           <a href="https://youtube.com/birobirobiro" target="_blank">
             <img src="images/youtube.svg" alt="Ícone Youtube" />
           </a>
         </li>
-        <li>
-          <a href="https://facebook.com/birobirobiro">
+        <li class="facebook">
+          <a href="https://facebook.com/birobirobiro" target="_blank">
             <img src="images/facebook.svg" alt="Ícone Facebook">
           </a>
         </li>
-        <li>
-          <a href="https://instagram.com/birobirobiro">
+        <li class="instagram">
+          <a href="https://instagram.com/birobirobiro" target="_blank">
             <img src="images/instagram.svg" alt="Ícone Instagram">
           </a>
         </li>
-        <li>
-          <a href="https://twitter.com/birobirobiro">
+        <li class="twitter">
+          <a href="https://twitter.com/birobirobiro" target="_blank">
             <img src="images/twitter.svg" alt="Ícone Twitter">
           </a>
         </li>
@@ -56,7 +56,31 @@
       </ul>
     </div>
   </main>
+  <script>
 
+    const LinksSocialMedia = {
+
+      github: "birobirobiro",
+      youtube: "birobirobiro",
+      facebook: "birobirobiro",
+      instagram: "birobirobiro",
+      twitter: "birobirobiro"
+    }
+
+    function changeSocialMediaLinks(){
+      for(let li of socialLinks.children) {
+        const social = li.getAttribute('class');
+
+        li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+
+        // alert(li.children[0].href)
+      }
+      
+    }
+
+    changeSocialMediaLinks()
+
+  </script>
 </body>
 
 </html>
